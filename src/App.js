@@ -1,11 +1,13 @@
+import './App.css';
+import 'antd/dist/antd.css';
 import { useState,useEffect } from 'react';
 import { add, getAll, remove, edit } from './api/product';
-import './App.css';
 import Router from './Routes';
 
 function App() {
 
   const [products, setProducts] = useState([]);
+  
   useEffect(() =>{
     const getProducts = async () =>{
       try{

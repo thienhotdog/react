@@ -6,14 +6,15 @@ import AddProduct from "./pages/admin/add_1";
 import Addproduct_2 from "./pages/admin/add_2";
 import EditProductForm from "./pages/admin/edit";
 import ListProduct from "./pages/admin/list";
+import HomePage from "./pages/website";
 
 const Router = (props) => {
   return (
     <BrowserRouter>
       <Routes >
-
+        {/* Layout Website*/}
         <Route path="/" element={<WebsiteLayout />}>
-          <Route index element={<div>Home page</div>} />
+          <Route index element={<HomePage {...props} />} />
           <Route path="product" element={<div>Product page</div>} />
           <Route path="contact" element={<div>Contact</div>} />
         </Route>
