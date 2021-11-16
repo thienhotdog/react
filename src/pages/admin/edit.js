@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
+import { Navigate } from "react-router";
 import { get } from "../../api/product";
 
 
@@ -14,6 +15,8 @@ const EditProductForm = (props) => {
 
 
   const { id } = useParams();
+  
+  console.log(id);
 
   const [product, setProduct] = useState({});
 
@@ -37,7 +40,7 @@ const EditProductForm = (props) => {
     };
     console.log(newItem);
     props.onEdit(newItem);
-    // history.push("/product");
+    <Navigate to="/" />
   };
   return (
     <>

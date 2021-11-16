@@ -6,12 +6,14 @@ const Header = () =>{
        <header className="header">
            <nav className="header_navbar">
                 <ul className="navbar-list">
-                    <img src="https://snh.vn/wp-content/uploads/2016/01/logo-adidas.png" className="navbar-list-img" />
+                    <NavLink to="">
+                        <img src="https://snh.vn/wp-content/uploads/2016/01/logo-adidas.png" className="navbar-list-img" />
+                    </NavLink>
                 </ul>
 
                 <ul className="navbar-list">
                     <li className="navbar-item">
-                        <NavLink to="" className="navbar-item-link">Shop</NavLink>
+                        <NavLink to="/shop" className="navbar-item-link">Shop</NavLink>
                     </li>
                     <li className="navbar-item">
                         <NavLink to="" className="_navbar-item-link">Tin Tức</NavLink>
@@ -29,7 +31,7 @@ const Header = () =>{
                         <NavLink to="" className="navbar-item-link">Đăng Ký</NavLink>
                     </li>
                     <li className="navbar-item">
-                        <NavLink to="" className="navbar-item-link">Đăng nhập</NavLink>
+                        <NavLink to="/admin" className="navbar-item-link">Đăng nhập</NavLink>
                     </li>
                 </ul>
 

@@ -7,6 +7,8 @@ import Addproduct_2 from "./pages/admin/add_2";
 import EditProductForm from "./pages/admin/edit";
 import ListProduct from "./pages/admin/list";
 import HomePage from "./pages/website";
+import ProductDetailPage from "./pages/website/product_detail";
+import Shop from "./pages/website/shop";
 
 const Router = (props) => {
   return (
@@ -15,8 +17,8 @@ const Router = (props) => {
         {/* Layout Website*/}
         <Route path="/" element={<WebsiteLayout />}>
           <Route index element={<HomePage {...props} />} />
-          <Route path="product" element={<div>Product page</div>} />
-          <Route path="contact" element={<div>Contact</div>} />
+          <Route path="shop" element={<Shop {...props} />} />
+          <Route path="product/:id/detail" element={<ProductDetailPage />} />
         </Route>
 
         {/* Layout Admin */}

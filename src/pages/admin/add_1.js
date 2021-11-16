@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 
 const AddProduct = (props) =>{
     const [valueInput, setValueInput] = useState("");
@@ -8,10 +8,10 @@ const AddProduct = (props) =>{
         const { name, value } = e.target;
         console.log("name", name);
         console.log("value", value);
-        // setValueInput({
-        // ...valueInput,
-        // [name]: value
-        // });
+        setValueInput({
+        ...valueInput,
+        [name]: value
+        });
       };
     const onHandleSubmit = (e) => {
         e.preventDefault();

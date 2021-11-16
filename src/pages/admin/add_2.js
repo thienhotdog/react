@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 
 
+
 const Addproduct_2 = (props) =>{
     const {
         register,
@@ -23,8 +24,7 @@ const Addproduct_2 = (props) =>{
                 <br />
                 <input type="number" {...register("price", {required: true})} placeholder="giá" />
                 {errors.price && <span>bắt buộc phải nhập trường hợp này</span>}
-                <br />
-                
+                <br />  
                 <button >Thêm</button>
             </form>
         </div>
