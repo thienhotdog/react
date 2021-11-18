@@ -17,7 +17,7 @@ const Router = (props) => {
         {/* Layout Website*/}
         <Route path="/" element={<WebsiteLayout />}>
           <Route index element={<HomePage {...props} />} />
-          <Route path="shop" element={<Shop {...props} />} />
+          <Route path="shop" element={<Shop  />} />
           <Route path="product/:id/detail" element={<ProductDetailPage />} />
         </Route>
 

@@ -17,7 +17,7 @@ const ProductDetailPage = () =>{
             }
         };
         getProduct();
-    },[])
+    },[id])
     console.log(product);
     return(
         <div>

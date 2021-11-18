@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import {useNavigate} from "react-router-dom"
 
 
 
@@ -9,12 +10,15 @@ const Addproduct_2 = (props) =>{
         formState: {errors}
     } = useForm();
 
+    const navigate = useNavigate();
+
     const onSubmit = (data) =>{
        const newProducts = {
            ...data
        }
        console.log(newProducts);
        props.onAdd(newProducts);
+       navigate("/admin");
     }
     return(
         <div>

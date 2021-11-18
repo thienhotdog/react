@@ -24,3 +24,13 @@ export const get = (id) => {
     const url = `/products/${id}`;
     return instance.get(url);
 };
+
+export const sortProduct = (min,max) =>{
+    const url = `/products?price_gte=${min}&price_lte=${max}`;
+    return instance.get(url)
+}
+
+export const filterProduct = (value) =>{
+    const url = `/products?name_like=${value}`;
+    return instance.get(url);
+}

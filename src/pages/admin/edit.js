@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
-import { Navigate } from "react-router";
+import { useParams, useNavigate} from "react-router-dom";
+
+
 import { get } from "../../api/product";
 
 
@@ -33,6 +34,8 @@ const EditProductForm = (props) => {
     getProduct();
   }, []);
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
     const newItem = {
       id,
@@ -40,7 +43,7 @@ const EditProductForm = (props) => {
     };
     console.log(newItem);
     props.onEdit(newItem);
-    <Navigate to="/" />
+    navigate("/admin");
   };
   return (
     <>
